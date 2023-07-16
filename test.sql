@@ -42,7 +42,7 @@ select date(t.work_time) as work_date, count(*)
 from TroubleTickets t
     join TTStatus s on s.id = t.tt_status
 where s.name in ("открыта","ожидание") and DATE(t.work_time) BETWEEN '2020-12-02' and '2020-12-04'
-group by date(t.work_time)
+group by date(t.work_time);
 
 /* e.    Написать запрос, который выведет всех пользователей и количество
 их заявок со статусом «открыта» с сортировкой по имени пользователя.*/
